@@ -37,4 +37,9 @@ public class OrderController {
     public OrderModel save(@RequestBody OrderDto orderModel) throws ObjectSaveException {
         return service.save(mapper.orderDtoToOrderModel(orderModel));
     }
+
+    @PutMapping
+    public OrderModel update(@RequestBody OrderDto orderModel) throws ObjectSaveException {
+        return new OrderModel();
+    }
 }
