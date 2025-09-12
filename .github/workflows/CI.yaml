@@ -1,0 +1,34 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+      - release
+      - main
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        name: Descargando el codigo
+      - name: Instalar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Instalar Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Compilar
+        run: ./gradlew build
+      - uses: mr-smithers-excellent/docker-build-push@v6
+        name: Build & push Docker image
+        with:
+          image: cesbersi/orders-unisabana
+          tags: ${{ github.sha }}
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: cesbersi
+          password: ${{ secrets.DOCKER_PASSWORD }}

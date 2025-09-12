@@ -1,0 +1,13 @@
+services:
+ orders-app:
+    image: cesbersi/orders-unisabana:1.0.0
+    container_name: orders-app
+    environment:
+      PMA_ARBITRARY: 1
+      DB_USER: "testEnv"
+      DB_PASSWORD: "testEnv"
+      DB_URL: "jdbc:h2:mem:testEvdDb"
+    ports:
+      - 8080:8080
+volumes:
+  db-data:
