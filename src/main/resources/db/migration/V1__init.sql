@@ -5,3 +5,4 @@ CREATE TABLE IF NOT EXISTS orders (
     id_transaction VARCHAR(36)  NULL,
     pod_name VARCHAR(30) NOT NULL
 );
+
