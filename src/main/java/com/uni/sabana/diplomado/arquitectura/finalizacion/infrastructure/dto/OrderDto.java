@@ -12,6 +12,8 @@ public class OrderDto {
     private Long id;
     private String name;
     private Integer quantity;
+    private String idTransaction;
+    private String podName;
 
 
 }
