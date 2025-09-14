@@ -1,3 +1,4 @@
+pod: ${POD_NAME:unknown}
 server:
   port: 8080
 

@@ -27,4 +27,10 @@ public class OrderEntity {
     @Min(value = 1, message = "La cantidad minima es 1")
     @Basic
     private Integer quantity;
+
+    @Basic
+    private String idTransaction;
+
+    @Basic
+    private String podName;
 }

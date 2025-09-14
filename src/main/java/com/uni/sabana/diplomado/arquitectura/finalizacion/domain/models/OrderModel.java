@@ -5,17 +5,25 @@ public class OrderModel {
     private Long id;
     private String name;
     private Integer quantity;
+    private String idTransaction;
+    private String podName;
 
     public OrderModel( ) {
 
     }
 
-    public OrderModel(Long id, String name, Integer quantity) {
+    public OrderModel(
+            Long id,
+            String name,
+            Integer quantity,
+            String idTransaction,
+            String podName) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
+        this.idTransaction = idTransaction;
+        this.podName = podName;
     }
-
     public Long getId() {
         return id;
     }
@@ -38,5 +46,21 @@ public class OrderModel {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public String getIdTransaction() {
+        return idTransaction;
+    }
+
+    public void setIdTransaction(String idTransaction) {
+        this.idTransaction = idTransaction;
+    }
+
+    public String getPodName() {
+        return podName;
+    }
+
+    public void setPodName(String podName) {
+        this.podName = podName;
     }
 }
