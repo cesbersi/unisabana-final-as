@@ -19,7 +19,6 @@ public class OrderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @NotEmpty(message = "El nombre no puede estar vacio")
     @Basic
     private String name;

@@ -8,9 +8,7 @@ public class OrderModel {
     private String idTransaction;
     private String podName;
 
-    public OrderModel( ) {
-
-    }
+    public OrderModel( ) { }
 
     public OrderModel(
             Long id,
