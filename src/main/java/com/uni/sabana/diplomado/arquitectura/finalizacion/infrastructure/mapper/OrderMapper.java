@@ -8,7 +8,6 @@ import org.mapstruct.MappingConstants;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface OrderMapper {
-
     OrderModel orderEntityToOrderModel(OrderEntity orderEntity);
     OrderEntity orderModelToOrderEntity(OrderModel orderModel);
     OrderDto orderModelToOrderDto(OrderModel orderModel);
